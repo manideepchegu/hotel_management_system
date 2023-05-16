@@ -1,0 +1,25 @@
+ERROR:2023-05-11 09:52:36,045:settings:Error occurred: 'room_type'
+ERROR:2023-05-11 09:52:43,328:settings:Error occurred: 'guest_name'
+ERROR:2023-05-11 10:02:08,632:settings:Error occurred: name 'set_connection' is not defined
+WARNING:2023-05-15 22:14:55,427:app:starting the database connection
+WARNING:2023-05-15 22:14:55,560:app:stoping the database connection
+WARNING:2023-05-15 22:25:04,030:app:starting the database connection
+WARNING:2023-05-15 22:25:46,174:app:starting the database connection
+ERROR:2023-05-15 22:25:46,297:app:Exception on /rooms/update/3 [PUT]
+Traceback (most recent call last):
+  File "/home/bc2113447/.local/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113447/.local/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113447/.local/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113447/.local/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113447/Desktop/hotel management system/app.py", line 101, in update_availability
+    cur.execute('UPDATE room SET availability  WHERE room_id= %s', (availability,room_id,))
+TypeError: not all arguments converted during string formatting
+WARNING:2023-05-15 22:27:50,424:app:starting the database connection
+WARNING:2023-05-15 22:28:35,484:app:starting the database connection
+WARNING:2023-05-15 22:28:35,634:app:stoping the database connection
+WARNING:2023-05-15 22:32:24,708:app:starting the database connection
+WARNING:2023-05-15 22:32:24,831:app:close the database connection
